@@ -1,0 +1,336 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #29736F;
+    background-image: url('../bg/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+}
+.welmsg{
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 35px;
+    font-family: 'Cairo', sans-serif;
+    color: white;
+}
+.homebtn{
+    width: 7rem;
+    background: #47C1BB;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.homebtn:hover{
+
+    background:#29736F;
+    cursor: pointer;
+}
+.img-hover {
+    transition: transform 0.5s ease-in-out; /* Add a transition for smooth scaling */
+  }
+  
+  .img-hover:hover {
+    transform: scale(1.2); /* Scale the image to 110% on hover */
+  }
+  #contentDiv {
+    position: relative;
+    padding-top: 1rem;
+    width: 98%;
+    /* height:98rem; */
+    border-radius: 12px;
+    margin: auto;
+ 
+    overflow: hidden; 
+
+  }
+  .shadow{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  .countdown-hidden {
+    display: none;
+    /* font-family: 'Squada One', cursive !important; */
+    font-size: 50px;
+    color: white;
+    animation: counter 1s ease-in-out;
+  }
+  @keyframes counter {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .centered-content {
+    height: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #btnDiv{
+    border:1px solid rgba(71, 193, 187,0.4);
+    border-radius: 12px;
+    /* backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.1);  */
+  
+  }
+.welTxtHead{
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 8px;
+    font-family: 'Cairo', sans-serif;
+}
+.welTxtTitle{
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 6px;
+  font-family: 'Cairo', sans-serif;
+}
+.languageBtn{
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #72C8C4;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    background-color: #29736F !important;
+  }
+  .ldBtn{
+    width: 175px;
+    height: 50px;
+    color: #ffffff;
+    border-radius: 1rem;
+    border:2px dashed rgba(71, 193, 187,0.4);
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .ldBtn:hover{
+    border:2px solid rgba(71, 193, 187,0.4);
+  } 
+  
+  .languageBtn:hover {
+    background: none !important;
+    border: 1px solid #72C8C4;
+  }
+  #captureBtn {
+    display: none !important;
+  }
+
+  /* Add animation for the button appearance */
+  @keyframes appearAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the captureBtn */
+  #captureBtn.appear {
+    display: block !important;
+    display: flex  !important;
+    justify-content: center  !important;
+    align-items: center  !important;
+    animation: appearAnimation 0.9s ease-in-out;
+  }
+
+  .outer-circle {
+    width: 200px; 
+    height: 200px;
+    background-color:rgba(116, 203, 199,0.4);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pulseAnimation{
+    animation: pulse 2s linear infinite;
+  }
+  #takeSnapshot:hover{
+    cursor: pointer;
+  }
+  /* .outer-circle::before, .outer-circle:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    border-radius: 5px;
+  } 
+*/
+  @keyframes pulse {
+
+    0%{
+      box-shadow: 0 0 0 0 rgba(116, 203, 199,0.5);
+    }
+    5%{
+      transform: scale(1.05);
+    }
+    5%{
+      transform: scale(1);
+    }
+    70%{
+      box-shadow: 0 0 0 50px rgba(255,190,11,0);
+    }
+    100%{
+      box-shadow: 0 0 0 100px rgba(255,190,11,0);
+    }
+  } 
+ 
+  .inner-circle {
+    width: 80%; 
+    height: 80%;
+    background-color:#47c1bb99 ;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+  }
+  /* .outer-circle::before, .outer-circle:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    border-radius: 5px;
+  }  */
+
+
+  
+  .inner-circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+  }
+  #video-container {
+    position: relative;
+    padding-top: 1rem;
+    width: 98%;
+    height: 65rem;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .selected-snapshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    pointer-events: none;
+} 
+
+/* #video-container {
+    position: relative;
+    padding-top:1rem;
+    width: 98%;
+    height: 100%;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+   
+} 
+
+.selected-snapshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; 
+} */
+.hide {
+    display: none;
+    opacity: 0;
+  }
+  
+  .show {
+    display: block;
+    opacity: 1;
+  }
+
+#snapshot-gallery {
+display: flex;
+overflow-x: scroll;
+width: 100%;
+
+}
+
+.snapshot {
+max-width: 100%;
+height: auto;
+margin-right: 10px; /* Adjust spacing between images */
+}
+/* Style the scrollbar */
+#snapshot-gallery::-webkit-scrollbar {
+width: 2px;
+}
+
+#snapshot-gallery::-webkit-scrollbar-thumb {
+background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+border-radius: 5px;
+}
+
+#snapshot-gallery::-webkit-scrollbar-thumb:hover {
+background-color: rgba(255, 255, 255, 0.5); /* Lighter on hover */
+}
+
+.imageCaptured {
+  animation: imageCaptureEffect 0.5s ease-in-out; /* Apply the animation */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes imageCaptureEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

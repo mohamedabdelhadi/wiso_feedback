@@ -1,0 +1,165 @@
+.kkiaLogo{
+    width: 18%;
+}
+.bg-white{
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 4px 2px rgba(77, 77, 78, 0.1);
+}
+.wlogo{
+    width: 25%;
+}
+.wbg{
+    background-color: #F6F7FB;
+}
+.wtxt{
+    color:#D3D3D3;
+}
+.wvalue{
+    color:#3A424D;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.svalue{
+    color:#3A424D;
+
+    font-weight: bold;
+    
+}
+.wisobox{
+    /* box-shadow: 0 2px 3px #0000000d; */
+    box-sizing: border-box !important;
+    border: 12px solid transparent !important;
+    /* background-clip:padding-box !important;  */
+    border-radius: 12px;
+} 
+.stitle{
+
+    color:#8C9298;
+}
+.sval{
+
+    color:#A3B2C5;
+  }
+
+.box-shadow{
+    box-shadow: 0 2px 3px #0000000d;
+}
+
+.leftborder{
+    border-radius: 0px;
+    border:none;
+    /* border-left: 3px dashed #f4f4f5; */
+}
+.wiso_hr{
+    border-top: 2px dashed; /* Ensures the <hr> displays as a line */
+    color: #04615C;
+}
+.kkia_color{
+    
+    color:#04615C;
+}
+.bg-kkia{
+    
+    background: linear-gradient(to right,#04615C,#0a928b);
+    
+}
+.logoborder{
+    border: 2px solid #04615C;
+}
+
+
+
+
+.mybox{
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    background-clip:padding-box !important;
+  }
+
+
+
+
+
+
+
+
+.skill-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-container .skill {
+    position: relative;
+    margin-right: 40px;
+}
+
+.skill-container .skill .outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0 0 0 /.15),
+        -6px -6px 10px -1px rgba(255 255 255 / .7);
+}
+
+.skill-container .skill .outer .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0 0 0/ .2),
+        inset -4px -4px 6px -1px rgba(255 255 255 / .7),
+        -.5px -.5px 0px rgba(255 255 255 / 1),
+        .5px .5px 0px rgba(0 0 0 /.15),
+        0px 12px 10px -10px rgba(0 0 0 / 0.05);
+}
+
+.skill-container .skill .outer .inner .number {
+    font-weight: 800;
+}
+
+
+.skill-container .skill:nth-child(1) .outer .inner .number {
+    color: #098A83;
+}
+
+.skill-container .skill:nth-child(2) .outer .inner .number {
+    color: #FC1D00;
+}
+
+.skill-container .skill:nth-child(3) .outer .inner .number {
+    color: #7811f7
+}
+
+circle {
+    fill: none;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    transition: 2s linear;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skill-container .skill:nth-child(1) circle {
+    stroke: #098A83;
+}
+
+.skill-container .skill:nth-child(2) circle {
+    stroke: #FC1D00;
+}
+
+.skill-container .skill:nth-child(3) circle {
+    stroke: #7811f7;
+}

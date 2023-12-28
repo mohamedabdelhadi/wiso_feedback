@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\robot_usage;
+use App\Models\survey;
+use App\Models\flight_usage;
+
+
+class WisoController extends Controller
+{
+    public function index()
+    {
+        return view('visio_dashboard');
+    }
+
+    public function get_wiso_data(Request $request){
+
+        $sources = robot_usage::all()->groupBy('name');
+    
+        $output = [];
+        foreach ($sources as $key => $source) {
+            $output[$key] = $source->count();
+        }
+    
+        return response()->json([
+            'output' => $output,
+        ]);
+    }
+
+    public function get_language_data(Request $request){
+
+        $sources = robot_usage::all()->groupBy('lang');
+    
+        $output = [];
+        foreach ($sources as $key => $source) {
+            $output[$key] = $source->count();
+        }
+        
+        return response()->json([
+            'output' => $output,
+        ]);
+    }
+
+    public function get_survey_data(Request $request){
+
+        $sources = survey::all()->groupBy('satisfaction');
+    
+        $output = [];
+        foreach ($sources as $key => $source) {
+            $output[$key] = $source->count();
+        }
+        
+        return response()->json([
+            'output' => $output,
+        ]);
+    }
+
+    public function get_finfo_data(Request $request){
+
+        $sources = flight_usage::all()->groupBy('method');
+    
+        $output = [];
+        foreach ($sources as $key => $source) {
+            $output[$key] = $source->count();
+        }
+        
+        return response()->json([
+            'output' => $output,
+        ]);
+    }
+    
+    
+
+}

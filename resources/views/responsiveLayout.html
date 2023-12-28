@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Layout Example</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure container takes up at least full viewport height */
+}
+
+.header, .nav, .main-content, .aside, .footer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+.header {
+  background-color: #f0f0f0;
+}
+
+.nav {
+  background-color: #d0d0d0;
+}
+
+.main-content {
+  flex-grow: 1; /* Allow main content to expand to fill remaining space */
+  background-color: #ffffff;
+}
+
+.aside {
+  background-color: #e0e0e0;
+}
+
+.footer {
+  background-color: #f0f0f0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">Header</header>
+    <nav class="nav">Nav</nav>
+    <main class="main-content">Main Content</main>
+    <aside class="aside">Aside</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

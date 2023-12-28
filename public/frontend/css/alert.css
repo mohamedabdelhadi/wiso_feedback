@@ -1,0 +1,67 @@
+
+  .alert-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 22rem;
+   
+    background: white !important;
+    color: #909092 !important;
+    padding: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+    z-index: 9999;
+}
+.alertMSgicon{
+    padding-top:0.8rem !important;
+}
+.sucessMsg{
+    color: #49d761;
+   
+}
+.failedMsg{
+    color: #f44336;
+   
+}
+.successborder{
+    border-left: 8px solid #1ae71a;
+}
+.failedborder{
+    border-left: 8px solid #f44336;
+}
+.alertMSgicon i{
+    font-size: 28px;
+
+}
+.alertshow {
+    visibility: visible;
+    opacity: 1;
+}
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+.fade-out {
+    animation: fadeOut 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} 
+
+

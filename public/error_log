@@ -1,0 +1,5 @@
+[05-Dec-2022 11:04:58 UTC] PHP Warning:  require(/home/inamqss/public_html/MCIT_dashboard/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/inamqss/public_html/MCIT_dashboard/index.php on line 34
+[05-Dec-2022 11:04:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/inamqss/public_html/MCIT_dashboard/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/inamqss/public_html/MCIT_dashboard/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/inamqss/public_html/MCIT_dashboard/index.php on line 34

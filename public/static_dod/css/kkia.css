@@ -1,0 +1,254 @@
+#homePanel {
+  height:50vh;
+
+}
+.main-wrapper{
+  background-color: rgba(4, 97, 92,0.2);
+}
+.centerElements{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+#webcamStreamPanel {
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+
+#contentPanel{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+.outer-circle {
+    width: 200px; /* Adjust the size of the outer circle */
+    height: 200px;
+    background-color:rgba(116, 203, 199,0.4);
+    border-radius: 50%; /* Create a circle shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2s linear infinite;
+  }
+  .outer-circle::before, .outer-circle:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    border-radius: 5px;
+  } 
+
+  @keyframes pulse {
+
+    0%{
+      box-shadow: 0 0 0 0 rgba(116, 203, 199,0.5);
+    }
+    5%{
+      transform: scale(1.05);
+    }
+    5%{
+      transform: scale(1);
+    }
+    70%{
+      box-shadow: 0 0 0 50px rgba(255,190,11,0);
+    }
+    100%{
+      box-shadow: 0 0 0 100px rgba(255,190,11,0);
+    }
+  }
+ 
+  .inner-circle {
+    width: 80%; /* Adjust the size of the inner circle */
+    height: 80%;
+    background-color:rgba(71, 193, 187,0.6) ;
+    border-radius: 50%; /* Create a circle shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflowing content */
+  }
+  .outer-circle::before, .outer-circle:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    border-radius: 5px;
+  } 
+
+
+  
+  .inner-circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Preserve aspect ratio while covering the inner circle */
+  }
+
+
+
+  /* drop */
+  .drop {
+    width: 700px;
+    height: 350px;
+    border-radius: 1%;
+    background: transparent;
+    border:1px solid rgba(71, 193, 187,0.4);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: changeShape 7s infinite; 
+  }
+  /* #dropPanel{
+    background: linear-gradient(-150deg,#29736F,#98D6D3);
+    border-radius: 12px;
+  } */
+ 
+  .dow{
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  
+
+  .language {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #72C8C4;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    background-color: #29736F !important;
+  }
+.language:hover {
+    background: none !important;
+    border: 1px solid #72C8C4;
+  }
+
+  .welTxtHead{
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 8px;
+    font-family: 'Cairo', sans-serif;
+}
+ /* Add this CSS to hide and show elements */
+ .panel-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Add this CSS to hide and show elements */
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+.welmsg{
+  font-size: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 35px;
+  font-family: 'Cairo', sans-serif;
+  color: white;
+}
+
+
+#dropPanel{
+  /* background: linear-gradient(-150deg,#29736F, #47C1BB) ; */
+  border-radius: 12px;
+  position: relative;
+}
+#dropPanel:before{
+   content: '';
+   position: absolute;
+   top:-2px;
+   left:-2px;
+   right:-2px;
+   bottom:-2px;
+  /* background:black;  */
+  z-index:-1; 
+  border-radius: 12px;
+}
+#dropPanel:after{
+  content: '';
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom:-2px;
+ /* background:black;  */
+ z-index:-2; 
+ filter:blur(40px);
+ border-radius: 12px;
+}
+#dropPanel:before,
+#dropPanel:after{
+border-radius: 12px;
+  box-shadow:linear-gradient(235deg,#29736F,#26908b, #13b1a9)
+}
+
+.homediv{
+  width: 7rem;
+  background: #47C1BB;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.iconGallbk{
+  /* background-image: url('../section/Jeddah.png'); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10rem;
+  border-radius: 0.2rem !important;
+  
+}
+
+
+
+
+#webcamStream {
+  width: 100%;
+  height: 56rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.frameSection {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.frameImage {
+  width: 100px;
+  height: 100px;
+}
+
+
+/* Add more styling as needed */
+
+
